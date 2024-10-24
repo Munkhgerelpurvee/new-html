@@ -1,0 +1,317 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.body {
+    font-family: "Roboto", sans-serif;
+    line-height: 1.5;
+    background: var(--light-color); 
+background: #333;}
+
+    
+  
+
+.main-body {
+    width: 100%;
+    height: 100%;
+    background: var(--light-color);
+
+
+}
+
+:root {
+    --primary-color:#c72727;
+    --secondary-color:#f99500;
+    --light-color:#f3f3f3;
+    --dark-color:#333;
+    --max-width:1200px;
+    --white:#fff;
+}
+
+.category {
+    --sports-color:#f99500;
+    --art-color:#a66bbe;
+    --tech-color:#009cff;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+
+}
+
+ul {
+    list-style: none;
+    /* background-color: var(--secondary-color); */
+}
+
+img {
+    width: 100%;
+}
+
+h1,h2,h3,h4,h5,h6 {
+font-family: "Roboto Condensed", sans-serif;
+margin: 0.5rem;
+line-height: 1.3;
+
+}
+
+/* Utility */
+.container {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 0 2rem;
+    overflow: hidden;
+    background: var(--sports-color);
+  
+}
+.category {
+    display: inline-block;
+    color:#fff ;
+    font-size:0.55rem;
+    text-transform: uppercase;
+    padding: 0.4rem 0.6rem;
+    border-radius: 15px;
+    margin-bottom: 0.5rem;
+}
+
+.category-sports {background: var(--sports-color);}
+.category-art {background: var(--art-color);}
+.category-tech {background: var(--tech-color);}
+
+.btn {
+    display: inline-block;
+    border: none;
+    color: #fff;
+    padding: 0.5rem 1.5rem;
+    background: var(--dark-color);
+}
+.btn:hover {
+    opacity: 0.7;
+}
+
+.btn-block {
+    display:block ;
+    width:100% ;
+    text-align: center;
+}
+
+.btn-light {background: var(--light-color) ;}
+.btn-primary {background: var(--primary-color); }
+.btn-secondary {background: var(--secondary-color); }
+
+.card {
+    background-color: #fff;
+    padding: 1rem;
+}
+
+/* background-utility class */
+.bg-dark {
+    background: var(--dark-color);
+    color: #fff;
+}
+
+.bg-primary {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+.bg-secondary {
+    background: var(--secondary-color);
+    color: #fff;
+}
+
+.bg-dark h1,
+.bg-dark h2,
+.bg-dark h3,
+.bg-dark a,
+
+.bg-primary h1,
+.bg-primary h2,
+.bg-primary h3,
+.bg-primary a,
+
+.bg-secondary h1,
+.bg-secondary h2,
+.bg-secondary h3,
+.bg-secondary a { color: #fff;}
+
+/* Padding utility class */
+.py-1 {padding: 1.5rem 0rem;}
+.py-2 {padding: 2rem 0rem;}
+.py-3 {padding: 3rem 0rem;}
+.p-1 {padding: 1.5rem;}
+.p-2 {padding: 2rem}
+.p-3 {padding: 3rem;}
+
+.list li {
+    padding: 0.5rem 0rem;
+    border-bottom: #555 dotted 1px;
+    width: 90%;
+    /* background-color: #a66bbe; */
+
+}
+.list li a:hover{
+
+    color: var(--primary-color) !important;
+}
+
+
+
+
+
+
+
+/* Navigation цэс: styling */
+#main-navbar {
+    background-color:var(--white);
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+#main-navbar .container {
+    display: grid;
+    grid-template-columns: 6fr 3fr 2fr;
+    padding: 1rem;
+    align-items: center;
+}
+
+#main-navbar .logo {
+    width: 180px;
+}
+
+#main-navbar ul {
+    justify-self: end;
+    display:flex ;
+}
+#main-navbar ul li a {
+    padding: 0.75rem;
+    font-weight: bold;
+}
+
+#main-navbar ul li a.current {
+    background: var(--primary-color);
+    color: var(--light-color);
+}
+
+#main-navbar ul li a:hover {
+    background: #f99500;
+    color:var(--dark-color);
+}
+
+#main-navbar .social {
+    justify-self: center;
+}
+
+#main-navbar .social i {
+    color: #777;
+    margin-left: 0.5rem;
+}
+
+/* Showcase styling */
+#showcase {
+    background: #333;
+    color:#fff;
+    padding: 2rem;
+    position: relative;
+    /* Яагаад  position: relative; тавьж байна гэхээр before гэсэн psuedo selector маань position: absolute; байна. Showcase-д before selector-р overlay хийж өгнө. position: absolute; авсан элемент нь хамгийн эхний  position: relative; элемнтэд байрладаг байгаа. */
+
+}
+
+#showcase::before {
+    content: '';
+    background: url(img/showcase-img3.jpeg) no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+}
+
+#showcase .showcase-container {
+    display: grid;
+    grid-template-columns: repeat(2,  1fr) ;
+    justify-content: center;
+    align-items: center;
+    height: 50vh; 
+}
+
+#showcase .showcase-content {
+    z-index: 1;
+    
+}
+
+#showcase .showcase-content p {margin-bottom: 1.5rem;}
+
+/* Нүүр хуудасны мэдээний grid */
+#home-articles .article-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+
+}
+
+/* #home-articles .article-container > *:first-child ингэх юм бол article-ийг бид div болгосон ч ер нь юу ч болгосон сонгох боломжтой болж байна гэсэн үг байна.  */
+
+#home-articles .article-container article:first-child,
+#home-articles .article-container article:last-child {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    grid-column: 1 / span 2;
+
+}
+
+#home-articles .article-container article:last-child {
+    grid-column: 2 / span 2;
+}
+
+/* Footer styling */
+#main-footer {
+    background: var(--dark-color);
+    color: #fff;
+}
+
+#main-footer img {
+    width: 150px;
+}
+
+#main-footer a {
+    color: #fff;
+}
+
+#main-footer .footer-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+#main-footer .footer-container > *:last-child {
+    background-color: #444;
+    grid-column: 1 / span 4;
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 0.7rem;
+
+} 
+
+#main-footer .footer-container input[type='email'] {
+    width: 90%;
+    padding: 0.5rem;
+    margin: 0.5rem 0rem;
+}
+
+#main-footer .footer-container input[type='submit'] {
+    width: 90%;
+    padding: 0.5rem;
+    color: var(--light-color);
+}
+
+p {
+    margin: 0.5rem 0;
+}
+
+
+
